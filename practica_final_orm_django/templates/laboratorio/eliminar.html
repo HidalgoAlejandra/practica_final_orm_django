@@ -1,0 +1,20 @@
+{% extends 'laboratorio/base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <br><br>
+    <div class="alert alert-danger" role="alert">
+    Estas seguro que deseas eliminar al "{{laboratorio.nombre}}"?
+    </div>
+    <p>
+    <a href="{% url 'mostrar_lab' %}"><-- Retornar</a>
+    </p>
+    <p>
+    <input class="btn btn-danger" type="submit" value="Confirm">
+    </p>
+</form>
+
+{% endblock content %}
+
+
