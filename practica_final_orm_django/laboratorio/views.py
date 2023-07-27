@@ -18,11 +18,8 @@ def insertar_lab_view(request):
 
 def mostrar_lab_view(request):
     laboratorios = Laboratorio.objects.all()
-    num_visitas = request.session.get("num_visits", 1)
-    request.session["num_visits"] = num_visitas + 1
     context = {
         "laboratorios": laboratorios,
-        "num_visitas": num_visitas,
     }
     return render(request, "laboratorio/mostrar.html", context)
 
