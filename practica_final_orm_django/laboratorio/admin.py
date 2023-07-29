@@ -5,8 +5,8 @@ from .models import Laboratorio, DirectorGeneral, Producto
 
 
 class LaboratorioAdmin(admin.ModelAdmin):
-    search_fields = "nombre"
-    list_display = ("id", "nombre")
+    search_fields = ["nombre"]
+    list_display = ["id", "nombre"]
 
 
 admin.site.register(Laboratorio, LaboratorioAdmin)

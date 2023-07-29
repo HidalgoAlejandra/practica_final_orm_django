@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, HttpResponse
-
 from .forms import LaboratorioForm
 from .models import Laboratorio
 
