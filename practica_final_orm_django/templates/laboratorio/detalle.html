@@ -1,0 +1,17 @@
+{% extends 'laboratorio/base.html' %} {% block content %}
+<div class="card mx-auto m-3 p-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Información del Laboratorio: {{laboratorio.nombre}}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">{{laboratorio.nombre}}</h6>
+      <p class="card-text">
+        <ul>
+            <li>Id empleado: {{laboratorio.lab_id}}</li>
+            <li>Ciudad: {{laboratorio.lab_id}}</li>
+            <li>Pais: {{laboratorio.lab_id}}</li>
+        </ul>
+    </p>
+      <a href="{% url 'mostrar_lab' %}" class="card-link">Volver al Inicio</a>
+    </div>
+  </div>
+
+{% endblock content %}
