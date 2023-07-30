@@ -29,8 +29,9 @@ def editar_lab_view(request, pk):
         print(request.POST)
         if form.is_valid():
             laboratorio = Laboratorio.objects.get(id=pk)
-            laboratorio.lab_id = request.POST["lab_id"]
             laboratorio.nombre = request.POST["nombre"]
+            laboratorio.ciudad = request.POST["ciudad"]
+            laboratorio.pais = request.POST["pais"]
             laboratorio.save()
             return redirect("/laboratorio/mostrar/")
     laboratorio = Laboratorio.objects.get(id=pk)

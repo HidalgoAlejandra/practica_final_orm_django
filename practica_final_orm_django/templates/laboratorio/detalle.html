@@ -5,9 +5,9 @@
       <h6 class="card-subtitle mb-2 text-body-secondary">{{laboratorio.nombre}}</h6>
       <p class="card-text">
         <ul>
-            <li>Id empleado: {{laboratorio.lab_id}}</li>
-            <li>Ciudad: {{laboratorio.lab_id}}</li>
-            <li>Pais: {{laboratorio.lab_id}}</li>
+            <li>Id: {{laboratorio.pk}}</li>
+            <li>Ciudad: {{laboratorio.ciudad}}</li>
+            <li>Pais: {{laboratorio.pais}}</li>
         </ul>
     </p>
       <a href="{% url 'mostrar_lab' %}" class="card-link">Volver al Inicio</a>
