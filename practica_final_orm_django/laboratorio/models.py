@@ -3,7 +3,6 @@ from django.db import models
 
 # Create your models here.
 class Laboratorio(models.Model):
-    lab_id = models.CharField(max_length=3, verbose_name="Id")
     nombre = models.CharField(max_length=200, verbose_name="Laboratorio")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualización")
