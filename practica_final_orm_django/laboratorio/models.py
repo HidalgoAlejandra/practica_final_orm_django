@@ -5,6 +5,10 @@ from django.db import models
 # Create your models here.
 class Laboratorio(models.Model):
     nombre = models.CharField(max_length=200, verbose_name="Laboratorio")
+    ciudad = models.CharField(
+        max_length=100, default="Desconocida", verbose_name="Ciudad"
+    )
+    pais = models.CharField(max_length=100, default="Desconocido", verbose_name="Pais")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualización")
 
@@ -19,6 +23,9 @@ class Laboratorio(models.Model):
 class DirectorGeneral(models.Model):
     nombre = models.CharField(max_length=255, verbose_name="Director General")
     laboratorio = models.OneToOneField("Laboratorio", on_delete=models.CASCADE)
+    especialidad = models.CharField(
+        max_length=200, default="Desconocida", verbose_name="Especialidad"
+    )
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Creación")
     updated = models.DateTimeField(
         auto_now=True, verbose_name="Fecha de actuialización"
