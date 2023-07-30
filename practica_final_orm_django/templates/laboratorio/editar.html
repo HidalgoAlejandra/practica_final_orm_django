@@ -2,7 +2,8 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
-<div class="row col-6 mt-3">
+<h1 class="text-dark fw-bolder">Actualizar Laboratorio</h1>
+<div class="row col-6 mt-3 shadow p-3 mb-5 bg-body rounded">
     <form action="" method="post">
         {% csrf_token %}
         {{form|crispy}}

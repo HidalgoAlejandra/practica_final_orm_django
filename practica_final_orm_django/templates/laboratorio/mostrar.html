@@ -4,7 +4,7 @@
 <h1 class="card-title text-dark fw-bolder">Información de Laboratorios</h1>
 <br>
 
-<table class="table">
+<table class="table table-bordered shadow p-3 mb-5 bg-body rounded">
     <thead>
       <tr>
         <th scope="col">Nombre</th>
@@ -30,7 +30,7 @@
         {% endfor %}
     </tbody>
   </table>
-  <p>Usted a visitado esta pagina {{num_visitas}}</p>
+  <p>Usted ha visitado esta pagina {{num_visitas}} veces</p>
   <div class="col-6 m-3 p-1 alert alert-danger" role="alert">
     <br><a href="{% url 'insertar_lab' %}">Agregar Nuevo Laboratorio--></a>
 </div>
